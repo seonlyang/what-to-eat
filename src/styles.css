@@ -56,7 +56,11 @@ button:focus-visible, input:focus-visible { outline: 3px solid #fabd69; outline-
 .empty-illustration span { transform: rotate(8deg); font-size: 38px; filter: saturate(.72); }
 .empty-state strong { font-size: 14px; font-weight: 800; }
 .empty-state p { font-size: 12px; color: #a3988e; margin: 6px 0 0; }
-.food-list { padding: 0; margin: 21px 0 0; list-style: none; display: flex; flex-direction: column; gap: 8px; max-height: 367px; overflow-y: auto; }
+.food-list { padding: 0 4px 0 0; margin: 21px 0 0; list-style: none; display: flex; flex-direction: column; gap: 8px; max-height: 220px; overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; scrollbar-width: thin; scrollbar-color: #e4c6aa transparent; }
+.food-list::-webkit-scrollbar { width: 7px; }
+.food-list::-webkit-scrollbar-track { background: transparent; }
+.food-list::-webkit-scrollbar-thumb { border-radius: 99px; background: #e4c6aa; }
+.food-list:focus-visible { outline: 3px solid #fabd69; outline-offset: 3px; }
 .food-item { display: flex; align-items: center; gap: 12px; min-height: 49px; padding: 7px 9px 7px 13px; border: 1px solid #f4eee8; border-radius: 12px; background: #fffcf9; }
 .food-index { color: #eaa876; font-weight: 800; font-size: 11px; font-family: 'Nunito', sans-serif; }
 .food-name { min-width: 0; overflow-wrap: anywhere; flex: 1; font-size: 14px; font-weight: 700; }

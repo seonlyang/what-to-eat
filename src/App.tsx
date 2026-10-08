@@ -150,7 +150,7 @@ function App() {
                   <p>먹고 싶은 음식을 추가해 보세요!</p>
                 </div>
               ) : (
-                <ul className="food-list">
+                <ul className="food-list" aria-label="오늘의 후보 목록" tabIndex={0}>
                   {foods.map((food, index) => (
                     <li className="food-item" key={food.id}>
                       <span className="food-index">{String(index + 1).padStart(2, '0')}</span>
